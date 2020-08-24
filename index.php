@@ -1,9 +1,13 @@
 <?php
 session_start();
+// $_SESSION["userName"] == "Guest";
+
 if (isset($_SESSION["userName"]))
   $sUserName = $_SESSION["userName"];
-else
+else {
   $sUserName = "Guest";
+}
+
 
 if ($sUserName == "Guest") {
   $_SESSION["LoginStatus"] = "登入";
